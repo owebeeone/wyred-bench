@@ -1,0 +1,24 @@
+{
+  "artifact": "synthetic_signals",
+  "board_serial": "SYN-0001",
+  "results": {
+    "pwm_duty": {
+      "values": {
+        "duty": 30.0
+      }
+    },
+    "xtal_32k": {
+      "values": {
+        "duty": 60.0,
+        "freq": 32768.0
+      }
+    }
+  },
+  "testplan_stamp": {
+    "locks": {
+      "external-interface": 0,
+      "firmware-facing": 0
+    },
+    "series": "A"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "artifact": "watchy_v1_bench",
+  "checks": [
+    {
+      "declared_by": {
+        "instance": "",
+        "module": "WatchyBench"
+      },
+      "expect": {
+        "max_ma": 150.0,
+        "state": "active"
+      },
+      "id": "batt_current",
+      "kind": "current",
+      "probe": {
+        "ground_ref": null,
+        "points": []
+      },
+      "provenance": {
+        "declaration": "batt_current",
+        "subject": "+BATT"
+      },
+      "subject": "+BATT"
+    },
+    {
+      "declared_by": {
+        "instance": "",
+        "module": "WatchyBench"
+      },
+      "expect": {
+        "addrs": [
+          24
+        ]
+      },
+      "id": "i2c_accel",
+      "kind": "i2c_scan",
+      "probe": {
+        "ground_ref": null,
+        "points": [
+          {
+            "net": "I2C0_SCL",
+            "pad": "1",
+            "refdes": "TP6"
+          },
+          {
+            "net": "I2C0_SDA",
+            "pad": "1",
+            "refdes": "TP7"
+          }
+        ]
+      },
+      "provenance": {
+        "addrs_source": "derived",
+        "declaration": "i2c_accel",
+        "subject": "I2C0"
+      },
+      "subject": "I2C0"
+    },
+    {
+      "declared_by": {
+        "instance": "",
+        "module": "WatchyBench"
+      },
+      "expect": {
+        "freq": 115200.0,
+        "freq_high": 117504.0,
+        "freq_low": 112896.0
+      },
+      "id": "prog_signal",
+      "kind": "signal",
+      "probe": {
+        "ground_ref": null,
+        "points": [
+          {
+            "net": "debug.prog.tx",
+            "pad": "1",
+            "refdes": "TP1"
+          },
+          {
+            "net": "debug.prog.rx",
+            "pad": "1",
+            "refdes": "TP2"
+          }
+        ]
+      },
+      "provenance": {
+        "declaration": "prog_signal",
+        "freq_tolerance": {
+          "freq_tol_pct": 2.0
+        },
+        "subject": "debug.prog"
+      },
+      "subject": "debug.prog"
+    },
+    {
+      "declared_by": {
+        "instance": "",
+        "module": "WatchyBench"
+      },
+      "expect": {
+        "high": 3.465,
+        "low": 3.135,
+        "nominal": 3.3
+      },
+      "id": "rail_3v3",
+      "kind": "rail",
+      "probe": {
+        "ground_ref": {
+          "net": "GND",
+          "pad": "1",
+          "refdes": "TP5"
+        },
+        "points": [
+          {
+            "net": "+3V3",
+            "pad": "1",
+            "refdes": "TP4"
+          }
+        ]
+      },
+      "provenance": {
+        "declaration": "rail_3v3",
+        "nominal_source": "derived",
+        "subject": "+3V3",
+        "tolerance": {
+          "tol_pct": 5
+        }
+      },
+      "subject": "+3V3"
+    }
+  ],
+  "declarations": [
+    {
+      "declared_by": {
+        "instance": "",
+        "module": "WatchyBench"
+      },
+      "id": "batt_current",
+      "kind": "current",
+      "max_ma": 150.0,
+      "state": "active",
+      "subject": "+BATT"
+    },
+    {
+      "addrs": [
+        24
+      ],
+      "addrs_source": "derived",
+      "declared_by": {
+        "instance": "",
+        "module": "WatchyBench"
+      },
+      "id": "i2c_accel",
+      "kind": "i2c_scan",
+      "subject": "I2C0"
+    },
+    {
+      "declared_by": {
+        "instance": "",
+        "module": "WatchyBench"
+      },
+      "freq": 115200.0,
+      "freq_tol_pct": 2.0,
+      "id": "prog_signal",
+      "kind": "signal",
+      "subject": "debug.prog"
+    },
+    {
+      "declared_by": {
+        "instance": "",
+        "module": "WatchyBench"
+      },
+      "id": "rail_3v3",
+      "kind": "rail",
+      "nominal": 3.3,
+      "nominal_source": "derived",
+      "subject": "+3V3",
+      "tol_pct": 5
+    }
+  ],
+  "path": "testplan",
+  "stamp": {
+    "locks": {
+      "external-interface": 0,
+      "firmware-facing": 0
+    },
+    "series": "A"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "artifact": "watchy_v1_bench",
+  "board_serial": "SN-0001",
+  "results": {
+    "batt_current": {
+      "state": "active",
+      "unit": "mA",
+      "value": 175.0
+    },
+    "i2c_accel": {
+      "addrs": [
+        24
+      ]
+    },
+    "prog_signal": {
+      "values": {
+        "freq": 115200.0
+      }
+    },
+    "rail_3v3": {
+      "unit": "V",
+      "value": 3.3
+    }
+  },
+  "state": "active",
+  "testplan_stamp": {
+    "locks": {
+      "external-interface": 0,
+      "firmware-facing": 0
+    },
+    "series": "A"
+  }
+}

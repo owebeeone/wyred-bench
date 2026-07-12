@@ -1,0 +1,115 @@
+{
+  "artifact": "synthetic_signals",
+  "checks": [
+    {
+      "declared_by": {
+        "instance": "",
+        "module": "SyntheticSignals"
+      },
+      "expect": {
+        "duty": 30.0,
+        "duty_high": 40.0,
+        "duty_low": 20.0
+      },
+      "id": "pwm_duty",
+      "kind": "signal",
+      "probe": {
+        "ground_ref": {
+          "net": "GND",
+          "pad": "1",
+          "refdes": "TP5"
+        },
+        "points": [
+          {
+            "net": "debug.prog.rx",
+            "pad": "1",
+            "refdes": "TP2"
+          }
+        ]
+      },
+      "provenance": {
+        "declaration": "pwm_duty",
+        "duty_tolerance": {
+          "duty_tol_pts": 10.0
+        },
+        "subject": "debug.pwm"
+      },
+      "subject": "debug.pwm"
+    },
+    {
+      "declared_by": {
+        "instance": "",
+        "module": "SyntheticSignals"
+      },
+      "expect": {
+        "duty": 50.0,
+        "duty_high": 55.0,
+        "duty_low": 45.0,
+        "freq": 32768.0,
+        "freq_high": 32768.65536,
+        "freq_low": 32767.34464
+      },
+      "id": "xtal_32k",
+      "kind": "signal",
+      "probe": {
+        "ground_ref": {
+          "net": "GND",
+          "pad": "1",
+          "refdes": "TP5"
+        },
+        "points": [
+          {
+            "net": "debug.prog.tx",
+            "pad": "1",
+            "refdes": "TP1"
+          }
+        ]
+      },
+      "provenance": {
+        "declaration": "xtal_32k",
+        "duty_tolerance": {
+          "duty_tol_pts": 5.0
+        },
+        "freq_tolerance": {
+          "freq_tol_ppm": 20.0
+        },
+        "subject": "debug.xtal"
+      },
+      "subject": "debug.xtal"
+    }
+  ],
+  "declarations": [
+    {
+      "declared_by": {
+        "instance": "",
+        "module": "SyntheticSignals"
+      },
+      "duty": 30.0,
+      "duty_tol_pts": 10.0,
+      "id": "pwm_duty",
+      "kind": "signal",
+      "subject": "debug.pwm"
+    },
+    {
+      "declared_by": {
+        "instance": "",
+        "module": "SyntheticSignals"
+      },
+      "duty": 50.0,
+      "duty_tol_pts": 5.0,
+      "freq": 32768.0,
+      "freq_tol_ppm": 20.0,
+      "id": "xtal_32k",
+      "kind": "signal",
+      "subject": "debug.xtal"
+    }
+  ],
+  "path": "testplan",
+  "stamp": {
+    "locks": {
+      "external-interface": 0,
+      "firmware-facing": 0
+    },
+    "series": "A"
+  }
+}

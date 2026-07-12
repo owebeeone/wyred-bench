@@ -1,0 +1,109 @@
+{
+  "artifact": "watchy_v1_bench",
+  "generated_by": "wyred_bench.selftest",
+  "hooks": [
+    {
+      "checks": [
+        "rail_3v3"
+      ],
+      "hook": "adc_read_mv",
+      "reason": "ADC channel-to-pad mapping is not derivable from contract artifacts"
+    },
+    {
+      "checks": [
+        "batt_current"
+      ],
+      "hook": "enter_state",
+      "reason": "driving the board into a named operating state is firmware-specific"
+    },
+    {
+      "checks": [
+        "i2c_accel"
+      ],
+      "hook": "i2c_scan",
+      "reason": "mapping an L1 bus name to a hardware I2C peripheral index is not derivable from contract artifacts"
+    },
+    {
+      "checks": [
+        "prog_signal"
+      ],
+      "hook": "measure_signal",
+      "reason": "the signal-capture peripheral (timer / input capture) is board-specific"
+    },
+    {
+      "checks": [],
+      "hook": "read_board_serial",
+      "reason": "the board serial source is board-specific"
+    },
+    {
+      "checks": [
+        "batt_current"
+      ],
+      "hook": "read_current_ma",
+      "reason": "the current-sense method (series shunt / supply readout) is board-specific"
+    }
+  ],
+  "stamp": {
+    "locks": {
+      "external-interface": 0,
+      "firmware-facing": 0
+    },
+    "series": "A"
+  },
+  "targets": [
+    "c",
+    "micropython"
+  ],
+  "unresolved": [
+    {
+      "check": null,
+      "hook": "read_board_serial",
+      "kind": null,
+      "note": "the board serial source is board-specific.",
+      "parameter": "board_serial"
+    },
+    {
+      "check": "batt_current",
+      "hook": "enter_state",
+      "kind": "current",
+      "note": "driving the board into operating state 'active' is firmware-specific.",
+      "parameter": "state_entry",
+      "state": "active"
+    },
+    {
+      "check": "batt_current",
+      "hook": "read_current_ma",
+      "kind": "current",
+      "note": "the current-sense method for rail +BATT is board-specific.",
+      "parameter": "current_sense",
+      "rail": "+BATT",
+      "state": "active"
+    },
+    {
+      "bus": "I2C0",
+      "check": "i2c_accel",
+      "hook": "i2c_scan",
+      "kind": "i2c_scan",
+      "note": "mapping L1 bus I2C0 to a hardware I2C peripheral index is not derivable.",
+      "parameter": "bus_peripheral"
+    },
+    {
+      "check": "prog_signal",
+      "hook": "measure_signal",
+      "kind": "signal",
+      "note": "the signal-capture method for net debug.prog.tx (test point TP1) is board-specific.",
+      "parameter": "capture",
+      "refdes": "TP1",
+      "tp": "debug.prog.tx"
+    },
+    {
+      "check": "rail_3v3",
+      "hook": "adc_read_mv",
+      "kind": "rail",
+      "net": "+3V3",
+      "note": "ADC channel wired to net +3V3 (test point TP4) is not derivable; fill in the integer channel.",
+      "parameter": "channel",
+      "refdes": "TP4"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "artifact": "synthetic_partial",
+  "checks": [
+    {
+      "declared_by": {
+        "instance": "",
+        "module": "SyntheticSignals"
+      },
+      "expect": {
+        "freq": 1000.0
+      },
+      "id": "bad_sig",
+      "kind": "signal",
+      "probe": {
+        "ground_ref": {
+          "net": "GND",
+          "pad": "1",
+          "refdes": "TP5"
+        },
+        "points": [
+          {
+            "net": "debug.prog.tx",
+            "pad": "1",
+            "refdes": "TP1"
+          }
+        ]
+      },
+      "provenance": {
+        "declaration": "bad_sig",
+        "subject": "debug.bad"
+      },
+      "subject": "debug.bad"
+    }
+  ],
+  "declarations": [
+    {
+      "declared_by": {
+        "instance": "",
+        "module": "SyntheticSignals"
+      },
+      "freq": 1000.0,
+      "id": "bad_sig",
+      "kind": "signal",
+      "subject": "debug.bad"
+    }
+  ],
+  "path": "testplan",
+  "stamp": {
+    "locks": {
+      "external-interface": 0,
+      "firmware-facing": 0
+    },
+    "series": "A"
+  }
+}

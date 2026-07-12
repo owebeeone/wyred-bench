@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wyred-bench"
+version = "0.1.0"
+description = "wyred-bench — the oracle extended into physics: a bench-card generator and a measurement comparator that score a filled-in measurement record against a derived .testplan.json. Depends on wyred-contract only; pure stdlib."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+wyred-bench-card = "wyred_bench.card:main"
+wyred-bench-compare = "wyred_bench.compare:main"
+wyred-bench-selftest = "wyred_bench.selftest:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,18 @@
+{
+  "artifact": "synthetic_partial",
+  "board_serial": "SYN-0001",
+  "results": {
+    "bad_sig": {
+      "values": {
+        "freq": 1000.0
+      }
+    }
+  },
+  "testplan_stamp": {
+    "locks": {
+      "external-interface": 0,
+      "firmware-facing": 0
+    },
+    "series": "A"
+  }
+}
